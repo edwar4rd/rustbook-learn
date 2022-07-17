@@ -1,9 +1,13 @@
+
+#[derive(Debug)]
 struct Vec2ii(i32, i32);
 
 fn main() {
     let vec1 = Vec2ii(5, 1);
     let vec2 = Vec2ii(-2, 10);
 
+    println!("First vector of the parallelogram: {:?}", vec1);
+    println!("Second vector of the parallelogram: {:?}", vec2);
     println!("Area of the parallelogram: {}", area(vec1, vec2));
 }
 
