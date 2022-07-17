@@ -1,10 +1,12 @@
+struct Vec2ii(i32, i32);
+
 fn main() {
-    let vec1 = (5, 1);
-    let vec2 = (-2, 10);
-    
+    let vec1 = Vec2ii(5, 1);
+    let vec2 = Vec2ii(-2, 10);
+
     println!("Area of the parallelogram: {}", area(vec1, vec2));
 }
 
-fn area(veca: (i32, i32), vecb: (i32, i32)) -> i32{
-    veca.0*vecb.1-veca.1*vecb.0
+fn area(veca: Vec2ii, vecb: Vec2ii) -> i32 {
+    veca.0 * vecb.1 - veca.1 * vecb.0
 }
