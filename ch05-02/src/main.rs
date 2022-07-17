@@ -1,12 +1,10 @@
 fn main() {
-    let vec1x = 5;
-    let vec1y = 1;
-    let vec2x = -2;
-    let vec2y = 10;
+    let vec1 = (5, 1);
+    let vec2 = (-2, 10);
     
-    println!("Area of the parallelogram: {}", area(vec1x, vec1y, vec2x, vec2y));
+    println!("Area of the parallelogram: {}", area(vec1, vec2));
 }
 
-fn area(vecax: i32, vecay: i32, vecbx: i32, vecby: i32) -> i32{
-    vecax*vecby-vecay*vecbx
+fn area(veca: (i32, i32), vecb: (i32, i32)) -> i32{
+    veca.0*vecb.1-veca.1*vecb.0
 }
